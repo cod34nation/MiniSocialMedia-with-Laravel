@@ -14,6 +14,7 @@ use DB;
 
 class ArticleController extends Controller
 {
+     protected $date;
     /**
      * Display a listing of the resource.
      *
@@ -24,6 +25,7 @@ class ArticleController extends Controller
          //return Tes::all();
         //$tes = Tes::all();
         $articles = Article::paginate(10);
+       // $articles = Article::onlyTrashed()->paginate(10); //untuk menampilkan artikel yang sudah dihapus
        // $articles = Article::all();
         // $article = DB::table('articles')->get();
         return view('articles.index',compact('articles'));
@@ -93,8 +95,9 @@ class ArticleController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {
-        //
+    {   
+        $article = Article::findOrFail($id);
+       return view('articles.edit',compact('article'));
     }
 
     /**
@@ -106,7 +109,19 @@ class ArticleController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        $article = Article::findOrFail($id);
+        if(!isset($request->live))
+             $article->update(array_merge($request->all(),['live'=>false]));
+        
+
+        else
+            $article->update($request->all());
+        
+       
+        return redirect('/articles');
+
+
     }
 
     /**
@@ -117,6 +132,10 @@ class ArticleController extends Controller
      */
     public function destroy($id)
     {
-        //
+         Article::destroy($id);
+        //$article->forceDelete()
+
+        return redirect('/articles');
+
     }
 }

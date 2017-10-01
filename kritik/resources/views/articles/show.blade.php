@@ -12,6 +12,8 @@
 					
 					<span> Article By User {{$article->user_id}} </span>
 
+					<small><a href="/articles/{{$article->id}}/edit">Edit</a></small>
+
 					<span class="pull-right"> 
 
 					{{$article->created_at->diffForHumans()}}

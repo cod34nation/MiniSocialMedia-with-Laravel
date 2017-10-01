@@ -25,6 +25,21 @@
 				</div>
 
 				<div class="panel-footer clearfix" style="background-color: white">
+
+					@if($article->user_id == Auth::id())
+
+					<form action="/articles/{{$article->id}}" method="POST" class="pull-right" style="margin-left: 25px">
+
+					{{csrf_field()}}
+					{{method_field('DELETE')}}
+						
+						<button class="btn btn-danger btn-sm">
+							Delete
+						</button>
+
+					</form>
+
+					@endif
 					<i class="fa fa-thumbs-o-up pull-right " aria-hidden="true"></i>
 
 
