@@ -12,6 +12,10 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ asset('css/fa/css/font-awesome.min.css') }}">
+
+
 </head>
 <body>
     <div id="app">
@@ -52,6 +56,15 @@
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
+                                <li><a href="/home">Home</a></li>
+
+                                <li><a href="/profile/{{Auth::user()->username}}">My Profile</a></li>
+                                    
+
+                                    <hr>
+                                    
+                                    <li><a href="/articles/create">Create Post</a></li>
+                                    <li><a href="/articles">Feed</a></li>
                                     <li>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
