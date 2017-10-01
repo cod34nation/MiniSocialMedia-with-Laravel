@@ -45,18 +45,9 @@
                             <label for="dob" class="col-md-4 control-label">Date Of Birth</label>
 
                             <div class="col-md-6">
-                                <div class='input-group date' id='datetimepicker1'>
-                                    <input type='text' class="form-control" />
-                                        <span class="input-group-addon">
-                                        <span class="glyphicon glyphicon-calendar"></span>
-                                        </span>
-                                </div>
+                               <input type="date" name="dob" class="form-control">
 
-                                <script type="text/javascript">
-                                $(function () {
-                                $('#datetimepicker1').datetimepicker();
-                                 });
-                                </script>
+                               
                                 
                             </div>
                         </div>
