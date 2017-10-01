@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>SiKritik.Com</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -79,15 +79,25 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    SiKritik.com
                 </div>
 
+
+
+
+                
+
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                <b>Supported By</b>
+               <br>
+                <br>
+                    <a href="https://www.facebook.com/rijul.arekhsmaawa" target="_blank">ALIM-INDEV</a>
+                    <a href="http://internetpositif.uzone.id/">BEHATO</a>
+                    <a href="https://www.facebook.com/naufaldi.rafifsatriya" target="_blank">eX-Alim</a>
+                    <a href="http://internetpositif.uzone.id/" target="_blank">LenChu-Dev</a>
+                    <a href="https://www.facebook.com/ler.worr" target="_blank">Biner-Dev</a>
+                    <a href="https://www.facebook.com/4med123" target="_blank">Panda-Dev</a>
+                     <hr>
                 </div>
             </div>
         </div>

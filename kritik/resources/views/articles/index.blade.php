@@ -18,7 +18,9 @@
 
 				<div class="panel-body">
 					
-				 {{$article->content}}	
+				 {{$article->ShortContent}}	
+
+				 <a href="/articles/{{ $article->id }}">Read More</a>
 
 				</div>
 
