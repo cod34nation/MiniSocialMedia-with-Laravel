@@ -12,6 +12,7 @@ use Auth;
 
 use DB;
 
+
 class ArticleController extends Controller
 {
      protected $date;
@@ -22,12 +23,14 @@ class ArticleController extends Controller
      */
     public function index()
     {
+       // DB::table('post')->orderBy('id', 'desc')->pluck('title');
          //return Tes::all();
         //$tes = Tes::all();
-        $articles = Article::paginate(10);
+       // $articles = DB::table('articles');
+        $articles = Article::orderBy('id','desc')->paginate(10);
        // $articles = Article::onlyTrashed()->paginate(10); //untuk menampilkan artikel yang sudah dihapus
        // $articles = Article::all();
-        // $article = DB::table('articles')->get();
+         //$articles = DB::table('articles')->get();
         return view('articles.index',compact('articles'));
     }
 

@@ -31,7 +31,7 @@
 						 <div class="checkbox">
 						 	<label>
 						 	<input type="checkbox" name="live " {{$article->live == 1 ?'checked':''}}>
-						 	Live
+						 	For Public
 						 	</label>
 
 						 </div>

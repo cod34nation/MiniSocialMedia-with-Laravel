@@ -25,7 +25,7 @@
 						 <div class="checkbox">
 						 	<label>
 						 	<input type="checkbox" name="live">
-						 	Live
+						 	For Public
 						 	</label>
 
 						 </div>
